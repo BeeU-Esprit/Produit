@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0"
+            style="-fx-background-color: linear-gradient(to bottom, #1f1f1f, #333333);"
+            xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.Controllers.AjouterCategorie">
+
+    <!-- Titre -->
+    <Label layoutX="230.0" layoutY="20.0" style="-fx-font-size: 24px; -fx-text-fill: yellow;" text="Ajouter une Catégorie" />
+
+    <VBox layoutX="50.0" layoutY="80.0" spacing="15.0">
+
+        <!-- Nom de la catégorie -->
+        <HBox spacing="20.0">
+            <Label style="-fx-text-fill: white; -fx-font-size: 14px;" text="Nom de la Catégorie:" />
+            <TextField fx:id="txtNomCategorie" prefWidth="400.0" promptText="Entrez le nom de la catégorie" />
+        </HBox>
+
+        <!-- Description -->
+        <HBox spacing="20.0">
+            <Label style="-fx-text-fill: white; -fx-font-size: 14px;" text="Description:" />
+            <TextField fx:id="txtDescriptionCategorie" prefWidth="400.0" promptText="Entrez une description" />
+        </HBox>
+
+        <!-- Choix d'image -->
+        <HBox spacing="20.0">
+            <Label style="-fx-text-fill: white; -fx-font-size: 14px;" text="Image:" />
+            <Button fx:id="btnChoisirImage" text="Choisir une image" onAction="#choisirImage"
+                    style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 14px;" />
+        </HBox>
+
+        <!-- Aperçu de l'image -->
+        <ImageView fx:id="imageViewCategorie" fitWidth="100" fitHeight="100" layoutX="250" layoutY="300" />
+
+    </VBox>
+
+    <!-- Boutons -->
+    <Button fx:id="btnAjouterCategorie" layoutX="50.0" layoutY="430.0" onAction="#enregistrerCategorie"
+            prefWidth="150.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px;"
+            text="Ajouter Catégorie" />
+
+    <Button fx:id="btnRetour" layoutX="452.0" layoutY="430.0" onAction="#retourPage2"
+            prefWidth="150.0" style="-fx-background-color: #FFC107; -fx-text-fill: black; -fx-font-size: 14px;"
+            text="Retour" />
+
+</AnchorPane>

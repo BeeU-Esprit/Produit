@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="604.0" prefWidth="820.0" style="-fx-background-color: #2E3440; -fx-padding: 30;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pidev3a32.controllers.ServicesController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <VBox spacing="10.0" />
+          <HBox layoutX="296.0" layoutY="78.0" spacing="10.0" />
+          <TableView fx:id="servicesTable" layoutX="251.0" layoutY="273.0" prefHeight="200.0" prefWidth="394.0">
+              <columns>
+                  <TableColumn fx:id="idServiceColumn" text="ID" />
+                  <TableColumn fx:id="nomServiceColumn" text="Nom" />
+                  <TableColumn fx:id="descriptionColumn" prefWidth="95.199951171875" text="Description" />
+                  <TableColumn fx:id="typeServiceColumn" prefWidth="136.00006103515625" text="Type" />
+              </columns>
+          </TableView>
+      <Label layoutX="278.0" layoutY="136.0" style="-fx-font-size: 36px; -fx-text-fill: white;" text="Supprimer Service" textFill="#cccf93">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+            <Label layoutX="220.0" layoutY="203.0" prefHeight="38.0" prefWidth="202.0" text="Nom Service à supprimer:" textFill="#f2eded">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label> <Button layoutX="755.0" layoutY="499.0" onAction="#supprimerService" text="Supprimer" />  <TextField fx:id="nomServiceDeleteField" layoutX="444.0" layoutY="203.0" prefHeight="38.0" prefWidth="190.0" />
+      <ImageView fitHeight="122.0" fitWidth="152.0" layoutX="348.0" layoutY="14.0">
+         <image>
+            <Image url="@hjk-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="422.0" layoutY="525.0" style="-fx-font-size: 14px; -fx-text-fill: #D8DEE9;" text="© 2025 Hive" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="585.0" prefWidth="921.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pidev3a32.controllers.ServicesController">
+    <children>
+
+        <!-- Sidebar with Gradient Background -->
+        <AnchorPane layoutX="-8.0" prefHeight="720.0" prefWidth="320.0" style="-fx-background-color: linear-gradient(to bottom, #2e3440, #3b4252);">
+            <children>
+                <!-- Logo and Title with Hover Animation -->
+                <ImageView fitHeight="141.0" fitWidth="171.0" layoutX="70.0" layoutY="14.0" style="-fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.5), 10, 0.5, 0, 0)">
+                    <image>
+                        <Image url="@../../../../../../../../Downloads/hjk-removebg-preview.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="70.0" layoutY="162.0" prefHeight="33.0" prefWidth="264.0" text="          HIVE" textFill="#d8dee9">
+                    <font>
+                        <Font name="Manjari Regular" size="22.0" />
+                    </font>
+                </Label>
+
+                <!-- Dynamic Menu Buttons with Hover Effect -->
+                <Button fx:id="homeButton" layoutX="-2.0" layoutY="241.0" mnemonicParsing="false" onAction="#onClickMenu" prefHeight="45.0" prefWidth="314.0" style="-fx-background-color: transparent;" text="Home" textFill="WHITE">
+                    <font>
+                        <Font name="Manjari Regular" size="21.0" />
+                    </font>
+                    <style>
+                        .button:hover {
+                        -fx-background-color: rgba(255, 255, 255, 0.2);
+                        -fx-scale-x: 1.1;
+                        -fx-scale-y: 1.1;
+                        }
+                    </style>
+                </Button>
+                <Button fx:id="attButton" layoutX="-2.0" layoutY="324.0" mnemonicParsing="false" onAction="#onClickMenu" prefHeight="41.0" prefWidth="320.0" style="-fx-background-color: transparent;" text="Services" textFill="WHITE">
+                    <font>
+                        <Font name="Manjari Regular" size="19.0" />
+                    </font>
+                    <style>
+                        .button:hover {
+                        -fx-background-color: rgba(255, 255, 255, 0.2);
+                        -fx-scale-x: 1.1;
+                        -fx-scale-y: 1.1;
+                        }
+                    </style>
+                </Button>
+                <Button fx:id="marksButton" layoutX="-2.0" layoutY="410.0" mnemonicParsing="false" onAction="#onClickMenu" prefHeight="41.0" prefWidth="314.0" style="-fx-background-color: transparent;" text="Abonnement" textFill="WHITE">
+                    <font>
+                        <Font name="Manjari Regular" size="19.0" />
+                    </font>
+                    <style>
+                        .button:hover {
+                        -fx-background-color: rgba(255, 255, 255, 0.2);
+                        -fx-scale-x: 1.1;
+                        -fx-scale-y: 1.1;
+                        }
+                    </style>
+                </Button>
+                <Button fx:id="logoutButton" layoutX="1.0" layoutY="491.0" mnemonicParsing="false" onAction="#onClickMenu" prefHeight="41.0" prefWidth="314.0" style="-fx-background-color: transparent;" text="Sign Out" textFill="WHITE">
+                    <font>
+                        <Font name="Manjari Regular" size="19.0" />
+                    </font>
+                    <style>
+                        .button:hover {
+                        -fx-background-color: rgba(255, 255, 255, 0.2);
+                        -fx-scale-x: 1.1;
+                        -fx-scale-y: 1.1;
+                        }
+                    </style>
+                </Button>
+            <ImageView fitHeight="52.0" fitWidth="80.0" layoutX="32.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../IdeaProjects/PandaFX/pandaFX/img/images/preferences-desktop-display.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="43.0" layoutX="36.0" layoutY="418.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../IdeaProjects/PandaFX/pandaFX/img/accessories-notes.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="43.0" layoutX="36.0" layoutY="334.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../IdeaProjects/PandaFX/pandaFX/img/kmenuedit.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="43.0" layoutX="36.0" layoutY="490.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../IdeaProjects/PandaFX/pandaFX/img/xyz.png" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+
+        <!-- Main Content Area with Shadow and Transitions -->
+        <Label layoutX="349.0" layoutY="13.0" text="Gestion des Services">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+            <style>
+                .label {
+                -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 8, 0.5, 0, 3);
+                }
+            </style>
+        </Label>
+
+        <!-- Form with Rounded Corners and Padding -->
+        <TextField fx:id="nomServiceField" layoutX="643.0" layoutY="66.0" promptText="Nom du service" style="-fx-background-radius: 10; -fx-padding: 5px;" />
+        <TextField fx:id="descriptionField" layoutX="643.0" layoutY="127.0" promptText="Description" style="-fx-background-radius: 10; -fx-padding: 5px;" />
+        <TextField fx:id="typeServiceField" layoutX="643.0" layoutY="190.0" promptText="Type de service" style="-fx-background-radius: 10; -fx-padding: 5px;" />
+
+        <!-- Action Buttons with Animation -->
+        <Button layoutX="530.0" layoutY="296.0" onAction="#ajouterService" style="-fx-background-color: #3b4252; -fx-text-fill: white; -fx-background-radius: 10;" text="Ajouter">
+            <style>
+                .button {
+                -fx-background-color: #5e81ac;
+                }
+                .button:hover {
+                -fx-background-color: #81a1c1;
+                }
+            </style>
+        </Button>
+        <Button layoutX="674.0" layoutY="296.0" onAction="#modifierService" style="-fx-background-color: #3b4252; -fx-text-fill: white; -fx-background-radius: 10;" text="Modifier">
+            <style>
+                .button {
+                -fx-background-color: #5e81ac;
+                }
+                .button:hover {
+                -fx-background-color: #81a1c1;
+                }
+            </style>
+        </Button>
+        <Button layoutX="804.0" layoutY="296.0" onAction="#supprimerService" style="-fx-background-color: #3b4252; -fx-text-fill: white; -fx-background-radius: 10;" text="Supprimer">
+            <style>
+                .button {
+                -fx-background-color: #bf616a;
+                }
+                .button:hover {
+                -fx-background-color: #d08770;
+                }
+            </style>
+        </Button>
+
+        <!-- Table to Display Services -->
+        <TableView fx:id="servicesTable" layoutX="338.0" layoutY="379.0" prefHeight="200.0" prefWidth="560.0" style="-fx-background-radius: 10;">
+            <columns>
+                <TableColumn fx:id="idServiceColumn" prefWidth="100.0" text="ID" />
+                <TableColumn fx:id="nomServiceColumn" prefWidth="150.0" text="Nom" />
+                <TableColumn fx:id="descriptionColumn" prefWidth="200.0" text="Description" />
+                <TableColumn fx:id="typeServiceColumn" prefWidth="110.0" text="Type" />
+            </columns>
+        </TableView>
+      <AnchorPane layoutX="327.0" layoutY="-7.0" prefHeight="63.0" prefWidth="597.0" styleClass="#dcdea4" />
+
+    </children>
+   <effect>
+      <Glow />
+   </effect>
+</AnchorPane>

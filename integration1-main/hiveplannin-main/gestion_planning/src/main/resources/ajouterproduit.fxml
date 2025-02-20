@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, #1f1f1f, #333333);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pidev3a32.controllers.ajouterproduit">
+
+    <!-- Titre -->
+    <Label layoutX="230.0" layoutY="20.0" style="-fx-font-size: 24px; -fx-text-fill: yellow;" text="Ajouter un Produit" />
+
+    <VBox layoutX="50.0" layoutY="80.0" spacing="15.0">
+        <!-- Nom Produit -->
+        <HBox spacing="20.0">
+            <Label style="-fx-text-fill: white; -fx-font-size: 14px;" text="Nom Produit:" />
+            <TextField fx:id="NomProduit" prefWidth="400.0" />
+        </HBox>
+
+        <!-- Catégorie -->
+        <HBox spacing="20.0">
+            <Label style="-fx-text-fill: white; -fx-font-size: 14px;" text="Catégorie:" />
+            <TextField fx:id="Categorie" prefWidth="400.0" />
+        </HBox>
+
+        <!-- Prix -->
+        <HBox spacing="20.0">
+            <Label style="-fx-text-fill: white; -fx-font-size: 14px;" text="Prix:" />
+            <TextField fx:id="Prix" prefWidth="400.0" />
+        </HBox>
+
+        <!-- Stock Disponible -->
+        <HBox spacing="20.0">
+            <Label style="-fx-text-fill: white; -fx-font-size: 14px;" text="Stock Disponible:" />
+            <TextField fx:id="Stock" prefWidth="400.0" />
+        </HBox>
+
+        <!-- Date -->
+        <HBox spacing="20.0">
+            <Label style="-fx-text-fill: white; -fx-font-size: 14px;" text="Date:" />
+            <DatePicker fx:id="Date" prefHeight="26.0" prefWidth="474.0" />
+        </HBox>
+
+        <!-- Fournisseur (ComboBox pour sélection) -->
+        <HBox spacing="20.0">
+            <Label style="-fx-text-fill: white; -fx-font-size: 14px;" text="Fournisseur:" />
+            <ComboBox fx:id="FournisseurComboBox" prefWidth="400.0" promptText="Sélectionnez un fournisseur" />
+        </HBox>
+    </VBox>
+
+    <!-- Boutons -->
+    <Button fx:id="btnAjouter" layoutX="50.0" layoutY="430.0" onAction="#ajouterProduit" prefWidth="150.0" styleClass="button-yellow" text="Ajouter Produit" />
+    <Button fx:id="btnsauvgarde" layoutX="452.0" layoutY="430.0" onAction="#sauvgarderproduit" prefWidth="150.0" styleClass="button-yellow" text="Retour" />
+    <stylesheets>
+        <URL value="@Style.css" />
+    </stylesheets>
+</AnchorPane>

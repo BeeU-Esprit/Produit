@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="866.0" prefWidth="832.0" style="-fx-background-color: #E6F7FF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pidev3a32.controllers.PaiementController">
+   <ImageView fitHeight="871.0" fitWidth="837.0" layoutY="-6.0">
+      <image>
+         <Image url="@/Images/Orange and Black Modern Bold Sport Presentation (7).png" />
+      </image>
+   </ImageView>
+
+    <!-- Bouton Retour avec une nouvelle couleur -->
+    <Button layoutX="14.0" layoutY="14.0" onAction="#goBack" style="-fx-background-color: #e1a12f; -fx-text-fill: white; -fx-font-family: 'Segoe UI'; -fx-font-size: 14px; -fx-font-weight: bold; -fx-border-radius: 5px;" text="Back" />
+
+    <VBox alignment="CENTER" layoutX="35.0" layoutY="108.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="734.0" prefWidth="758.0" spacing="20">
+
+        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px;" text="Liste des Paiements:">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+        <ListView fx:id="paiementList" maxWidth="-Infinity" prefHeight="449.0" prefWidth="470.0" style="-fx-font-family: 'Segoe UI'; -fx-border-color: #999; -fx-border-radius: 5px;" />
+
+        <HBox alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="431.0" spacing="20">
+         <children>
+            <Button fx:id="AjPa" mnemonicParsing="false" onAction="#gotoPa" prefHeight="30.0" prefWidth="153.0" style="-fx-font-size: 14px; -fx-font-family: -fx-background-color; -fx-background-color: #ffffff; -fx-border-radius: 5px; -fx-font-weight: bold; -fx-text-fill: black;" text="Effectuer Paiement" />
+            <Button fx:id="modifP" mnemonicParsing="false" onAction="#gotomodif" style="-fx-font-size: 14px; -fx-font-family: 'Segoe UI'; -fx-background-color: #e1a12f; -fx-border-radius: 5px; -fx-font-weight: bold; -fx-font-weight: white;" text="modifier" />
+               <Button onAction="#supprimerPaiement" style="-fx-background-color: #dc3545; -fx-font-family: 'Segoe UI'; -fx-font-size: 14px; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-radius: 5px;" text="Supprimer" />
+         </children>
+        </HBox>
+    </VBox>
+     <Label layoutX="276.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="306.0" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-font-family: 'Baskerville Old Face';" text="Gestion des Paiements" textFill="WHITE" />
+</AnchorPane>

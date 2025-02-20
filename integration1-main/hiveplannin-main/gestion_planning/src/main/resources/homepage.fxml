@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="337.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pidev3a32.controllers.HomePageController">
+<children>
+    <ImageView fitHeight="444.0" fitWidth="600.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@interface-services.png" />
+        </image>
+    </ImageView>
+    <Hyperlink fx:id="serviceid" layoutX="71.0" layoutY="70.0" onAction="#openServiceDashboard2" prefHeight="24.0" prefWidth="87.0" text="Service" />
+    <Hyperlink fx:id="abonnementid" layoutX="67.0" layoutY="104.0" onAction="#openAbonnementDashboard" text="Abonnement" />
+    <ImageView fitHeight="305.0" fitWidth="464.0" layoutX="139.0" layoutY="33.0">
+        <image>
+            <Image url="@hjk-removebg-preview (1).png" />
+        </image>
+    </ImageView>
+      <Hyperlink fx:id="planninglab" layoutX="65.0" layoutY="145.0" onAction="#openPlanningLab" text="Planning" />
+      <Hyperlink fx:id="courslab" layoutX="67.0" layoutY="186.0" onAction="#openCoursLab" text="Cours" />
+      <Hyperlink fx:id="participantlab" layoutX="67.0" layoutY="229.0" onAction="#openParticipantLab" text="Participant" />
+      <Hyperlink fx:id="detaillab" layoutX="67.0" layoutY="267.0" onAction="#openDetailLab" text="Detail" />
+      <Hyperlink fx:id="produitpage" layoutX="67.0" layoutY="299.0" onAction="#openproduitLab" text="Produit" />
+</children>
+</AnchorPane>
